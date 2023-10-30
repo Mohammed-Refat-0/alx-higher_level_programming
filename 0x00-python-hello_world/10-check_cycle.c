@@ -6,8 +6,13 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *head = list;
+	listint_t *head;
 
+	if (!list)
+	{
+		return (0);
+	}
+	head = list;
 	while (list->next != NULL)
 	{
 		list = list->next;
