@@ -6,6 +6,6 @@ def uppercase(str):
             list.append(ord(i) - 32)
         else:
             list.append(ord(i))
-    for i in range(len(list)):
+    for i in list:
         print("{}".format(chr(i)), end="")
-        print()
+    print()
