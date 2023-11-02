@@ -9,5 +9,5 @@ if __name__ == "__main__":
     elif len_arg > 2:
         print(f"{(len_arg - 1):d} arguments:")
     if len_arg > 1:
-        for i in range(1,len_arg):
+        for i in range(1, len_arg):
             print(f"{i:d}: {argv[i]:s}")
