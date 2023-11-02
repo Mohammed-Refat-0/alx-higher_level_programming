@@ -7,7 +7,7 @@ if __name__ == "_main_":
     elif len_arg == 2:
         print("1 argument:")
     elif len_arg > 2:
-        print(f"{len_arg:d} arguments:")
+        print("{} arguments:".format(len_arg))
     if len_arg > 1:
         for i in range(1,len_arg):
-            print(f"{i:d}: {argv[i]:s}")
+            print("{}: {}".format(i, argv[i]))
