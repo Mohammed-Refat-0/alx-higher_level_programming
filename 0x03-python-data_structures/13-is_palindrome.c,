@@ -1,0 +1,32 @@
+#include "main.h"
+/**
+ * is_palindrome - checks whether a linked list is a palindrome
+ * @head: pointer to the head pointer
+ * return: 0 - if not palindrome, 1 if it is
+ */
+int is_palindrome(listint_t **head)
+{
+    listint_t *ptr;
+    count = 0;
+    int i = 0
+
+    if (!(*head))
+    {
+        return (1)
+    }
+    ptr = (*head);
+    while (ptr - >next != NULL)
+    {
+        ptr = ptr->next;
+        count++;
+    }
+    for (i = 0; i < int(count / 2); i++)
+    {
+        if (ptr->n != (*head)->n)
+        {
+            return (0)
+        }
+        (*head) = (*head)->next;
+        ptr--;
+    }
+}
