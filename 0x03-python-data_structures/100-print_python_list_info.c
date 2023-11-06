@@ -16,6 +16,6 @@ void print_python_list_info(PyObject *p)
 	printf("[*] Allocated = %ld\n", pyObj->allocated);
 	for (count = 0; count < length; count++)
 	{
-		printf("Element %ld: %s\n", count, Py_TYPE(pObj->ob_item[count])->tp_name);
+		printf("Element %ld: %s\n", count, Py_TYPE(pyObj->ob_item[count])->tp_name);
 	}
 }
