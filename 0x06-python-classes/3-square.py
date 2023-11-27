@@ -29,4 +29,4 @@ class Square:
             Returns:
                 _type_: int area of sqaure
             """
-            return self.size ^ 2
+            return self.size ** 2
