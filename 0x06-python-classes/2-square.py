@@ -4,9 +4,17 @@
 
 class Square:
     """A Square class"""
-    """attrubites: size"""
 
     def __init__(self, size=0):
+        """
+        Args:
+            size (int, optional): size of square. Defaults to 0.
+
+        Raises:
+            ValueError: if value < 0
+            TypeError: if type not int
+            TypeError:
+        """
         try:
             if size < 0:
                 raise ValueError("size must be >= 0")
