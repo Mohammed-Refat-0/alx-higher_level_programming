@@ -10,7 +10,6 @@ class Rectangle:
         self.height = height
 
     @property
-        """width attrubite: setter and getter"""
     def width(self):
         return self.__width
 
@@ -25,7 +24,6 @@ class Rectangle:
                 self.__width = value
 
     @property
-    """"height attrubite:setter and getter"""
     def height(self):
         return self.__height
 
