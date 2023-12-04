@@ -1,11 +1,16 @@
 #!/usr/bin/python3
+"""
+Contains lookup function
+"""
+
+
 def lookup(obj):
-    """A function that returns all avaliable attributes of an object
+    """return list of all attribuites of an objet
 
     Args:
-        obj (object)
+        obj (object):
 
     Returns:
-         list: list o an objects's attributes
+        list
     """
     return dir(obj)
