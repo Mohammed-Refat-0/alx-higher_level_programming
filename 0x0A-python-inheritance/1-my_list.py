@@ -1,8 +1,12 @@
+#!/usr/bin/python3
+"""
+contains MyList class
+"""
+
+
 class MyList(list):
-    """Mylist class
-    """
+    """a subclass of list"""
 
     def print_sorted(self):
-        """print list in sorted ascending order
-        """
+        """prints sorted list in ascending order"""
         print(sorted(self))
