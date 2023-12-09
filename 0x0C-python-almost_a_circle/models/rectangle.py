@@ -28,13 +28,20 @@ class Rectangle(Base):
     def display(self):
         """print rectangle with  '#' char in stdout
         """
+        for k in range(self.y):
+            print('')
         if self.area == 0:
             print('')
         else:
-            for i in range(self.width):
-                for j in range(self.height):
-                    print('#', end='')
+
+            for i in range(self.height):
+                print(' ' * self.x, end='')
+                print('#' * self.width, end='')
                 print('')
+
+    def __str__(self):
+        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+                f"{self.width}/{self.height}")
 
     @property
     def width(self):
