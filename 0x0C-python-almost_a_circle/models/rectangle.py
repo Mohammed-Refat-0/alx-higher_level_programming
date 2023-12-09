@@ -2,7 +2,7 @@
 """contain Rectangle class
 """
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -12,11 +12,29 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """constructor for Rectangle
         """
-        super().__int__(id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+
+    def area(self):
+        """getter for area of rectangle
+        Returns:
+            area
+        """
+        return (self.__height * self.__width)
+
+    def display(self):
+        """print rectangle with  '#' char in stdout
+        """
+        if self.area == 0:
+            print('')
+        else:
+            for i in range(self.width):
+                for j in range(self.height):
+                    print('#', end='')
+                print('')
 
     @property
     def width(self):
@@ -47,7 +65,7 @@ class Rectangle(Base):
         """
         return self.__height
 
-    @height_setter
+    @height.setter
     def height(self, value):
         """setter for height
         Args:
@@ -56,10 +74,10 @@ class Rectangle(Base):
             TypeError:
             ValueError:
         """
-        if type(value) = int:
+        if type(value) != int:
             raise TypeError("height must be an integer")
-            if value <= 0:
-                raise ValueError("height must be > 0")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
         @property
@@ -70,7 +88,7 @@ class Rectangle(Base):
             """
             return self.__x
 
-        @x_setter
+        @x.setter
         def x(self, value):
             """setter for x
             Args:
@@ -93,7 +111,7 @@ class Rectangle(Base):
             """
             return self.__y
 
-        @y_setter
+        @y.setter
         def y(Self, value):
             """setter for y
             Args:
