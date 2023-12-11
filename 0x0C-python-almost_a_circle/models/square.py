@@ -5,7 +5,7 @@
 from models.rectangle import Rectangle
 
 
-class Rectangle(Base):
+class Sqaure(Rectangle):
     """Square class inherit from Rectangle class
     """
 
