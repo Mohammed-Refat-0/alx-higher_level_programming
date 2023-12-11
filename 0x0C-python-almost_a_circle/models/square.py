@@ -2,7 +2,7 @@
 """contain Square class
 """
 
-from models.base import Rectangle
+from models.rectangle import Rectangle
 
 
 class Rectangle(Base):
