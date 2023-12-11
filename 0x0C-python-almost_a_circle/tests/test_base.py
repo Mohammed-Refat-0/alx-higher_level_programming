@@ -1,0 +1,58 @@
+#!/usr/bin/python3
+"""Defines unittests for base.py
+"""
+import os
+import unittest
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
+
+
+class TestBase_instantiation(unittest.TestCase):
+    """Unittests for testing instantiation of the Base class"""
+
+    def test_no_arg(self):
+        b1 = Base()
+        b2 = Base()
+        self.assertEqual(b1.id, b2.id - 1)
+
+    def test_three_bases(self):
+        b1 = Base()
+        b2 = Base()
+        b3 = Base()
+        self.assertNotEqual(b1.id, b3.id)
+
+    def test_unique_id(self):
+        self.assertEqual(11, Base(11).id)
+
+    def test_id_public(self):
+        b = Base(13)
+        b.id = 18
+        self.assertEqual(18, b.id)
+
+    def test_nb_instances_private(self):
+        with self.assertRaises(AttributeError):
+            print(Base(11).__nb_instances)
+
+    def test_dict_id(self):
+        self.assertEqual({"a": 1, "b": 2}, Base({"a": 1, "b": 2}).id)
+
+    def test_bool_id(self):
+        self.assertEqual(True, Base(True).id)
+
+    def test_list_id(self):
+        self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
+
+    def test_tuple_id(self):
+        self.assertEqual((1, 2), Base((1, 2)).id)
+
+    def test_bytes_id(self):
+        self.assertEqual(b'Python', Base(b'Python').id)
+
+    def test_two_args(self):
+        with self.assertRaises(TypeError):
+            Base(1, 2)
+
+
+if __name__ == "__main__":
+    unittest.main()
