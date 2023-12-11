@@ -30,6 +30,7 @@ class Sqaure(Rectangle):
         self.height = value
 
     def __str__(self):
-        """Return the print() and str() representation of a Square."""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                                                 self.width)
+        """return printable repersentation of square properties
+        """
+        return (f"[Square] ({self.id}) {self.x}/{self.y} - "
+                f"{self.size}")
