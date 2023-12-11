@@ -5,7 +5,7 @@
 from models.rectangle import Rectangle
 
 
-class Sqaure(Rectangle):
+class Square(Rectangle):
     """Square class inherit from Rectangle class
     """
 
@@ -13,6 +13,14 @@ class Sqaure(Rectangle):
         """constructor for square
         """
         super().__init__(size, size, x, y, id)
+
+    def to_dictionary(self):
+        """Return the dictionary representation Square"""
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y}
 
     @property
     def size(self):
