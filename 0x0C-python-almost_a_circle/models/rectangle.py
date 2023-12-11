@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""contain Rectangle class
+"""contain Rectangle class implemeted from class Base
 """
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
