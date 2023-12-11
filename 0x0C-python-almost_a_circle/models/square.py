@@ -33,4 +33,4 @@ class Sqaure(Rectangle):
         """return printable repersentation of square properties
         """
         return (f"[Square] ({self.id}) {self.x}/{self.y} - "
-                f"{self.size}")
+                f"{self.width}")
