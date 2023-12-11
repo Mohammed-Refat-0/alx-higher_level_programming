@@ -28,3 +28,9 @@ class Sqaure(Rectangle):
         """
         self.width = value
         self.height = value
+
+    def __str__(self):
+        """return printable repersentation of square properties
+        """
+        return (f"[Square] ({self.id}) {self.x}/{self.y} - "
+                f"{self.size}")
