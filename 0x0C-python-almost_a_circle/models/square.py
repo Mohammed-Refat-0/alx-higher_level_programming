@@ -38,3 +38,22 @@ class Sqaure(Rectangle):
         """
         return (f"[Square] ({self.id}) {self.x}/{self.y} - "
                 f"{self.size}")
+
+        def update(self, *args, **kwargs):
+            """
+            assigns key/value argument to attributes
+            kwargs is skipped if args is not empty
+            """
+        if len(args) == 0:
+            for key, val in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, val)
+            return
+
+        try:
+            self.id = args[0]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except IndexError:
+            pass
