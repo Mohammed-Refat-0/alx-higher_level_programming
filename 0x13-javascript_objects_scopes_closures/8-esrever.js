@@ -8,4 +8,5 @@ exports.esrever = function (list) {
     list[i] = list[x - i - 1];
     list[x - i - 1] = temp;
   }
+  return list;
 };
