@@ -4,10 +4,6 @@
 const Squarev = require('./5-square');
 
 class Square extends Squarev {
-  constructor (size) {
-    super(size, size);
-  }
-
   charPrint (c) {
     if (isNaN(this.char)) {
       c = 'X';
