@@ -5,7 +5,7 @@ const Squarev = require('./5-square');
 
 class Square extends Squarev {
   charPrint (c) {
-    if (isNaN(this.char)) {
+    if (c === undefined) {
       c = 'X';
     }
     for (let i = 0; i < this.size; i++) {
