@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""   lists all states with a name starting with "N"  database hbtn_0e_0_usa using sqldb"""
+"""   lists all states with a name starting with "N"
+database hbtn_0e_0_usa using sqldb"""
 import MySQLdb
 import sys
 
