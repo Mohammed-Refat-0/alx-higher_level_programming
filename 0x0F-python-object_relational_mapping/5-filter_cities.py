@@ -15,7 +15,7 @@ if __name__ == "__main__":
                  ON states.id=cities.state_id
                  WHERE states.name = %s""", (input, ))
     rows = curs.fetchall()
-    for row in rows:
-        print(row)
+    tmp = list(row[0] for row in rows)
+    print(*tmp, sep=", ")
     curs.close()
     db.close()
