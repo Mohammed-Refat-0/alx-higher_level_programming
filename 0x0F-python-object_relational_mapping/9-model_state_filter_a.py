@@ -20,7 +20,5 @@ if __name__ == "__main__":
     results = session.query(State).filter(
         State.name.like('%a%')).order_by(State.id)
 
-    if results is None:
-        print("Nothing")
-    else:
+    for result in results:
         print(results.id, results.name, sep=": ")
