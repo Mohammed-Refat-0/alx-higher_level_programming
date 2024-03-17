@@ -17,7 +17,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    results = session.query(State).Like('%a%').order_by(State.id)
+    results = session.query(State).filter(
+        State.name.like('%a%')).order_by(State.id)
 
     if results is None:
         print("Nothing")
