@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     results = session.query(State).filter(State.name == name)
 
-    try:
-        print(results[0].id)
-    except IndexError:
+    if results is None:
         print("Not found")
+    else:
+        print(results[0].id)
