@@ -17,7 +17,5 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    results = session.query(State).filter(State.name.like('%a%'))
-
-    for result in results:
-        print(results.id, results.name, sep=": ")
+    for instance in session.query(State).filter(State.name.like('%a%')):
+        print(instance.id, instance.name, sep=": ")
