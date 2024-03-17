@@ -1,1 +1,1 @@
-this repo contains files about ORM and sql connectors in Python
+this repo contains files about ORM (SQLAlchemy) and sql connectors (MySQLdb) in Python
