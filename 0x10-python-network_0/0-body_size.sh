@@ -1,4 +1,3 @@
 #!/bin/bash
 # output byte size of HTTP body response for a given URL.
-URL=$1
-curl -s -X GET "$URL" | wc -c
+curl -s -X GET "$1" | wc -c
