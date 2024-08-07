@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+"""add_integer module"""
+
+
 def add_integer(a, b=98):
     """function that add two integers
 
     Args:
-        a (int,float): 
+        a (int,float):
         b (int, optional): Defaults to 98.
 
     Raises:
